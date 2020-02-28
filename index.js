@@ -236,6 +236,20 @@ class ProjectManager extends Instructor {
       + If the student's grade is above a 70% let them graduate! Otherwise go back to grading their assignments to increase their score.
 */
 
+Student.prototype.grade = 25;
+
+Instructor.prototype.adjustGrade = function(grade) {
+  return grade * Math.random();
+};
+
+Student.prototype.graduate = function() {
+  if (this.grade > 0.7) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 ///////// END OF CHALLENGE /////////
 ///////// END OF CHALLENGE /////////
 ///////// END OF CHALLENGE /////////
